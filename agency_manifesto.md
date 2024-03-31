@@ -10,8 +10,8 @@ Revolucionar a publicidade no Facebook, combinando perfeitamente tecnologia de I
 
 ## Agency Structure:
 1. **GenesisCEO**: Supervisiona toda a operação, mantém o fluxo de trabalho entre os agentes e garante o cumprimento dos objetivos da agência.
-2. **AdCopyAgent**: É especializado na geração de textos de anúncios criativos e envolventes usando ferramentas de IA. Ele avalia o público-alvo e as características do produto/serviço para criar mensagens atraentes.
-3. **ImageCreatorAgent**: Utiliza DALL-E 3 para gerar imagens sincronizadas com o texto do anúncio. Este agente tem a tarefa de criar gráficos visualmente atraentes que chamem a atenção e transmitam a mensagem de forma eficaz.
+2. **AdCopyAgent**: É especializado na geração de copy de anúncios criativos e envolventes usando ferramentas de IA. Ele avalia o público-alvo e as características do produto/serviço para criar mensagens atraentes.
+3. **ImageCreatorAgent**: Utiliza DALL-E 3 para gerar imagens sincronizadas com a copy do anúncio. Este agente tem a tarefa de criar gráficos visualmente atraentes que chamem a atenção e transmitam a mensagem de forma eficaz.
 4. **FacebookManagerAgent**: Cuida do agendamento e postagem dos anúncios no Facebook. Este agente garante que cada anúncio seja publicado de acordo com as melhores práticas de tempo e direcionamento de público.
 
 ## Communication Flows:

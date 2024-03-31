@@ -1,51 +1,49 @@
-# MetaMarkAgency
+# MetaMarkAgência
 
-Welcome to the **MetaMarkAgency** repository, a cutting-edge solution designed to automate and enhance your Facebook marketing efforts using the power of AI. This SmmA agency is built upon the **Agency Swarm** framework, enabling the creation of specialized agents to handle different aspects of Facebook marketing: generating ad copy, creating images, and managing Facebook posts.
+Bem-vindo ao repositório **MetaMarkAgency**, uma solução de ponta projetada para automatizar e aprimorar seus esforços de marketing no Facebook usando o poder da IA. Esta agência SmmA é construída sobre a estrutura **Agency Swarm**, permitindo a criação de agentes especializados para lidar com diferentes aspectos do marketing do Facebook: geração de textos de anúncios, criação de imagens e gerenciamento de postagens no Facebook.
 
-### Agency Structure
+### Estrutura da Agência
 
-The AI SmmA Live Agency is composed of three primary agents:
+A AI SmmA Live Agency é composta por três agentes principais:
 
-- **Ad Copy Agent**: Generates compelling ad copy tailored to your campaign's goals.
-- **Image Creator Agent**: Utilizes Dalle 3 to create visually appealing images that complement the ad copy.
-- **Facebook Manager Agent**: Handles the posting of ads on Facebook, along with campaign and ad set creation.
+- **Ad Copy Agent**: gera textos de anúncios atraentes e adaptados aos objetivos da sua campanha.
+- **Agente Criador de Imagens**: utiliza Dalle 3 para criar imagens visualmente atraentes que complementam o texto do anúncio.
+- **Facebook Manager Agent**: cuida da publicação de anúncios no Facebook, juntamente com a criação de campanhas e conjuntos de anúncios.
 
-## Facebook App Setup
+## Configuração do aplicativo do Facebook
 
-To utilize the Facebook Manager Agent for posting ads, you need to set up a Facebook app and obtain the necessary credentials and permissions. Follow these steps to get started:
+Para utilizar o Facebook Manager Agent para postar anúncios, você precisa configurar um aplicativo do Facebook e obter as credenciais e permissões necessárias. Siga estas etapas para começar:
 
-1. **Create Your Facebook App**:
-   - Visit the [Facebook for Developers](https://developers.facebook.com/) site and log in.
-   - Click on "My Apps" and select "Create App".
-   - Choose "Business" as your app type and provide a name for your app.
-   - Follow the prompts to complete the app creation process.
+1. **Crie seu aplicativo do Facebook**:
+    - Visite o site [Facebook for Developers](https://developers.facebook.com/) e faça login.
+    - Clique em “Meus Aplicativos” e selecione “Criar Aplicativo”.
+    - Escolha "Comercial" como tipo de aplicativo e forneça um nome para ele.
+    - Siga as instruções para concluir o processo de criação do aplicativo.
 
-2. **Add the Marketing API**:
-   - In your app dashboard, find the "Add a Product" section and select "Marketing API".
-   - Click "Set Up" to add the Marketing API to your app.
+2. **Adicione a API Marketing**:
+    - No painel do seu aplicativo, encontre a seção "Adicionar um produto" e selecione "API de marketing".
+    - Clique em "Configurar" para adicionar a API Marketing ao seu aplicativo.
 
-3. **Configure App Settings**:
-   - Navigate to "Settings" > "Basic" in your app dashboard.
-   - Note your "App ID" and "App Secret" for later use.
-   - Add your app domain, privacy policy URL, and other required details.
+3. **Definir configurações do aplicativo**:
+    - Navegue até "Configurações" > "Básico" no painel do seu aplicativo.
+    - Anote seu "App ID" e "App Secret" para uso posterior.
+    - Adicione o domínio do seu aplicativo, URL da política de privacidade e outros detalhes necessários.
 
-4. **Obtain Access Token**:
-   - Go to the [Facebook Graph API Explorer](https://developers.facebook.com/tools/explorer/).
-   - Select your app from the "Application" dropdown.
-   - Click "Generate Access Token" and grant the necessary permissions for ad management.
-   - Copy the generated access token for use in your agency setup.
+4. **Obter token de acesso**:
+    - Acesse o [Facebook Graph API Explorer](https://developers.facebook.com/tools/explorer/).
+    - Selecione seu aplicativo no menu suspenso "Aplicativo".
+    - Clique em “Gerar Token de Acesso” e conceda as permissões necessárias para gerenciamento de anúncios.
+    - Copie o token de acesso gerado para uso na configuração da sua agência.
 
-5. **Update Environment File**:
-   - Create an `.env` file in your project directory if you haven't already.
-   - Add your "App ID", "App Secret", and "Access Token" to the file as environment variables.
+5. **Atualizar arquivo de ambiente**:
+    - Crie um arquivo `.env` no diretório do seu projeto, caso ainda não o tenha feito.
+    - Adicione seu "App ID", "App Secret" e "Access Token" ao arquivo como variáveis de ambiente.
 
-    ```env
-    FB_APP_ID=your_app_id
-    FB_APP_SECRET=your_app_secret
-    FB_ACCESS_TOKEN=your_access_token
-    ```
+     ```env
+     FB_APP_ID=seu_app_id
+     FB_APP_SECRET=seu_app_secret
+     FB_ACCESS_TOKEN=seu_token de acesso
+     ```
 
-6. **Install Facebook Business SDK** (if required by your tools):
-   - Run the following command to install the SDK:
-
-   
+6. **Instale o Facebook Business SDK** (se exigido pelas suas ferramentas):
+    - Execute o seguinte comando para instalar o SDK:
