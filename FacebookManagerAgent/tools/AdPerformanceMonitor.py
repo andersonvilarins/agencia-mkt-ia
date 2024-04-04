@@ -1,4 +1,4 @@
-# Importa BaseTool de agency_swarm.tools, uma base para todas as ferramentas criadas na framework.
+# Importa BaseTool de agency_swarm.tools, uma base para todas as ferramentas criadas no framework.
 from agency_swarm.tools import BaseTool
 
 # Importa classes específicas da API de negócios do Facebook para manipular conjuntos de anúncios e campanhas.
@@ -8,7 +8,7 @@ from facebook_business.adobjects.campaign import Campaign
 # Importa Field de pydantic, usado para definir campos com validação e descrições em modelos de dados.
 from pydantic import Field
 
-# Importa o módulo os para interagir com o sistema operacional, aqui usado principalmente para acessar variáveis de ambiente.
+# Importa o módulo "os" para interagir com o sistema operacional, aqui usado principalmente para acessar variáveis de ambiente.
 import os
 
 # Importa o módulo facebook_business para acessar a API do Facebook.

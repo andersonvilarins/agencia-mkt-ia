@@ -1,7 +1,10 @@
-#Este script configura uma agência automatizada onde diferentes agentes colaboram para criar, gerenciar e publicar anúncios no Facebook. 
-#Ele demonstra a flexibilidade do framework Agency Swarm em modelar operações complexas de marketing digital, utilizando agentes 
-#especializados para diferentes tarefas. A inclusão de uma interface Gradio na execução principal permite visualizar e interagir com o 
-#processo de maneira simplificada, tornando o sistema acessível até para quem não tem experiência profunda em programação.
+"""
+Este script configura uma agência automatizada onde diferentes agentes colaboram para criar, gerenciar e publicar anúncios no Facebook. 
+Ele demonstra a flexibilidade do framework Agency Swarm em modelar operações complexas de marketing digital, utilizando agentes 
+especializados para diferentes tarefas. A inclusão de uma interface Gradio na execução principal permite visualizar e interagir com o 
+processo de maneira simplificada, tornando o sistema acessível até para quem não tem experiência profunda em programação.
+
+"""
 
 
 # Importa a classe central Agency e os agentes específicos do framework Agency Swarm.
