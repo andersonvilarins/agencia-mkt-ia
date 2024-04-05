@@ -1,7 +1,11 @@
-#Este script introduz o MetaMarkCEO como uma entidade central no controle e supervisão das atividades dentro do ecossistema de automação
-# de marketing Agency Swarm. Atuando como um CEO, este agente é crucial para iniciar o processo de campanhas publicitárias e para garantir 
-#que os diversos agentes especializados (como geradores de texto de anúncio, criadores de imagem e gerenciadores de publicação de anúncios) 
-#colaborem de maneira eficaz e coordenada.
+"""
+
+Este script introduz o MetaMarkCEO como uma entidade central no controle e supervisão das atividades dentro do ecossistema de automação
+de marketing Agency Swarm. Atuando como um CEO, este agente é crucial para iniciar o processo de campanhas publicitárias e para garantir 
+que os diversos agentes especializados (como geradores de texto de anúncio, criadores de imagem e gerenciadores de publicação de anúncios) 
+colaborem de maneira eficaz e coordenada.
+
+"""
 
 # Importa a classe base Agent, fundamental para a criação de qualquer agente dentro do framework Agency Swarm.
 from agency_swarm.agents import Agent
@@ -14,8 +18,11 @@ class MetaMarkCEO(Agent):
         super().__init__(
             # O nome do agente, que neste caso sugere uma função de supervisão ou liderança, similar a um CEO em uma empresa.
             name="MetaMarkCEO",
-            # Descrição do papel deste agente: supervisionar a operação geral, manter o fluxo de trabalho entre os agentes e assegurar o cumprimento dos objetivos.
-            description="Supervisiona toda a operação, mantém o fluxo de trabalho entre os agentes e garante o cumprimento dos objetivos da agência. Atua como supervisor estratégico e iniciador do processo de campanha publicitária.",
+            # Descrição do papel deste agente: 
+            description="""
+                        Supervisiona toda a operação, mantém o fluxo de trabalho entre os agentes e garante o cumprimento dos objetivos
+                        da agência. Atua como supervisor estratégico e iniciador do processo de campanha publicitária.
+                        """,
             # Caminho para um arquivo markdown com instruções detalhadas de operação do agente. Útil para outros desenvolvedores ou usuários do sistema.
             instructions="./instructions.md",
             # Diretório destinado ao armazenamento de arquivos que podem ser necessários durante a execução das tarefas do agente.
