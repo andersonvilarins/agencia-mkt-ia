@@ -1,5 +1,7 @@
-#Este agente atua como um gestor dentro do sistema de automação de anúncios, assegurando que os anúncios sejam criados e publicados 
-# de maneira eficiente e eficaz, com foco na maximização do impacto e no alcance do público-alvo desejado.
+"""
+ Este agente atua como um gestor dentro do sistema de automação de anúncios, assegurando que os anúncios sejam criados e publicados 
+ de maneira eficiente e eficaz, com foco na maximização do impacto e no alcance do público-alvo desejado.
+"""
 
 # Importação da classe base Agent do módulo agency_swarm.agents.
 from agency_swarm.agents import Agent
@@ -10,7 +12,7 @@ class FacebookManagerAgent(Agent):
     def __init__(self):
         # Chamada ao construtor da classe base (Agent) com parâmetros específicos para este agente.
         super().__init__(
-            # Nome do agente, que o identifica dentro do framework Agency Swarm.
+            # Nome do agente, que o identifica dentro do framework "Agency Swarm".
             name="FacebookManagerAgent",
             # Descrição do propósito do agente: gerenciar agendamento e postagem de anúncios no Facebook.
             description="Cuida do agendamento e postagem dos anúncios no Facebook. Garante que cada anúncio seja publicado de acordo com as melhores práticas de tempo e segmentação de público.",

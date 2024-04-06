@@ -7,7 +7,7 @@ colaborem de maneira eficaz e coordenada.
 
 """
 
-# Importa a classe base Agent, fundamental para a criação de qualquer agente dentro do framework Agency Swarm.
+# Importa a classe base Agent, fundamental para a criação de qualquer agente dentro do framework "Agency Swarm".
 from agency_swarm.agents import Agent
 
 # Define a classe MetaMarkCEO, que herda da classe Agent, significando que possui todas as características e funcionalidades de um agente.

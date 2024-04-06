@@ -1,5 +1,7 @@
-#Este script exemplifica a integração e utilização da API do Facebook Business para automatizar a criação de anúncios no Facebook, 
-# destacando a importância da organização e validação de pré-requisitos no processo de automação de marketing digital.
+"""
+    Este script exemplifica a integração e utilização da API do Facebook Business para automatizar a criação de anúncios no Facebook, 
+    destacando a importância da organização e validação de pré-requisitos no processo de automação de marketing digital.
+"""
 
 # Importações necessárias para o funcionamento do script.
 import os  # Módulo do sistema operacional para interagir com o sistema de arquivos.
@@ -74,12 +76,12 @@ class AdCreator(BaseTool):
     def validate(self):
         # Verifica se todos os pré-requisitos estão presentes antes de permitir a execução.
         if not self.shared_state.get('image_path') or not self.shared_state.get('ad_set_id') or not self.shared_state.get('campaign_id') or not self.shared_state.get('ad_copy'):
-            raise ValueError('Certifique-se de que todas as dependências foram atendidas: imagem, ID do conjunto de anúncios, ID da campanha e texto do anúncio.')
+            raise ValueError('Certifique-se de que todas as dependencias foram atendidas: imagem, ID do conjunto de anuncios, ID da campanha e texto do anuncio.')
 
 # Bloco que verifica se este script é o ponto de entrada principal e executa a criação do anúncio.
 if __name__ == "__main__":
     # Exemplo de uso da classe, criando um anúncio com dados específicos.
-    tool = AdCreator(name="Test Creative 2", link="https://www.example.com")
+    tool = AdCreator(name="Test Creative 2", ad_text="Venha conhecer nosso serviço",link="https://www.example.com")
     tool.shared_state.set('image_path', 'image2.png')
     tool.shared_state.set('ad_set_id', '120207414681720118')
     tool.shared_state.set('ad_copy', '123')

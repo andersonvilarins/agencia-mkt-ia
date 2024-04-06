@@ -1,6 +1,8 @@
-# Esse script ilustra como gerar textos de anúncios criativos e personalizados utilizando o GPT da OpenAI, adaptando-se ao público-alvo, 
-# às características do produto e ao tom desejado para o anúncio. A implementação destaca o uso de tecnologias de IA para otimizar a 
-#criação de conteúdo em marketing digital.
+"""
+ Esse script ilustra como gerar textos de anúncios criativos e personalizados utilizando o GPT da OpenAI, adaptando-se ao público-alvo, 
+ às características do produto e ao tom desejado para o anúncio. A implementação destaca o uso de tecnologias de IA para otimizar a 
+ criação de conteúdo em marketing digital.
+"""
 
 # Importa as classes e funções necessárias de outros módulos e pacotes.
 from agency_swarm.tools import BaseTool  # Base para todas as ferramentas criadas no framework Agency Swarm.
@@ -8,6 +10,7 @@ from agency_swarm.util import get_openai_client  # Utilitário para obter uma in
 from pydantic import Field  # Importa Field de pydantic para definir campos com validações em modelos de dados.
 import openai  # Importa a biblioteca da OpenAI para interação com o GPT.
 import os  # Módulo do sistema operacional, usado aqui para acessar variáveis de ambiente.
+import requests
 import base64  # Módulo para codificação e decodificação de dados em base64.
 
 from dotenv import load_dotenv  # Importa a função load_dotenv para carregar variáveis de ambiente do arquivo .env.
@@ -66,5 +69,52 @@ if __name__ == "__main__":
         product_features="sustentável, acessível, elegante",
         ad_tone="divertido, enérgico"
     )
+
+class SerpApiSearchTool(BaseTool):
+    """
+    Ferramenta para realizar buscas na web utilizando a API da SerpApi.
+    Retorna uma lista de notícias e artigos relacionados ao tema especificado.
+
+    """
+
+    search_query: str = Field(
+        ..., description="Quem pode ser considerado superendividado para a Lei do Superendividamento"
+    )
+    api_key: str = Field(
+        default_factory=lambda: os.getenv("SERPAPI_API_KEY"),
+        description="Chave da API da SerpApi para autenticação. Deve ser definida como uma variável de ambiente."
+    )
+
+    def run(self):
+        """
+        Executa a busca na web utilizando a SerpApi com o tema especificado.
+        Retorna uma lista contendo resumos ou links para notícias e artigos relacionados.
+        """
+        params = {
+            "engine": "google",
+            "q": self.search_query,
+            "api_key": self.api_key,
+            "location": "Brazil",
+            "google_domain": "google.com",
+            "gl": "pt",
+            "hl": "br",
+            "num": "10",
+            "tbm": "nws"  # Modo de notícias
+        }
+
+        try:
+            response = requests.get("https://serpapi.com/search", params=params)
+            response.raise_for_status()
+            search_results = response.json()["news_results"]
+
+            return [{
+                "title": result["title"],
+                "link": result["link"],
+                "snippet": result["snippet"]
+            } for result in search_results]
+
+        except Exception as e:
+            return f"Erro ao realizar a busca: {e}"
+        
     # Imprime o resultado da geração do texto do anúncio.
     print(tool.run())

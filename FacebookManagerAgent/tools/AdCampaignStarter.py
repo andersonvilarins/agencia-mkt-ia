@@ -36,11 +36,13 @@ class AdCampaignStarter(BaseTool):
         try:
             # Acessa a conta de anúncios usando o ID fornecido.
             ad_account = AdAccount(ad_account_id)
-            # Define parâmetros para a criação da campanha, incluindo nome, objetivo, status e orçamento.
+            # Define parâmetros para a criação da campanha, incluindo nome, objetivo, status, orçamento e moeda BRL.
             params = {
                 'name': self.campaign_name,
                 'objective': "OUTCOME_LEADS",
                 'status': Campaign.Status.active,
+                ##linha de baixo inserida para teste 05/04/24
+                'currency':AdAccount.Currency.brl,
                 'daily_budget': self.budget,
                 'special_ad_categories': 'NONE',
             }
